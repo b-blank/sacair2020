@@ -1,0 +1,54 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+// Headers
+$header-heading-color2: #fff !default;
+$header-bg-color2: #153499 !default;
+$header-bg-color2-secondary: #0672df !default;
+
+// Text
+$section-headings-color2: #153499 !default;
+
+.page-header {
+	color: $header-heading-color2;
+	text-align: center;
+	background-color: $header-bg-color2!important;
+	background-image: linear-gradient(120deg, $header-bg-color2-secondary, $header-bg-color2)!important;
+}
+
+.main-content {
+  
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+	  margin-top: 2rem;
+	  margin-bottom: 1rem;
+	  font-weight: normal;
+	  color: $section-headings-color2!important;
+	}
+
+	table {
+		display: table;
+
+		@include large {
+			margin-left: calc((100% - #{$large-breakpoint}));
+			display: flexbox;
+			overflow: auto;
+		}
+		
+		@include medium {
+			display: block;
+			overflow: scroll;
+		}
+		
+		@include small {
+			display: block;
+			overflow: scroll;
+		}
+	}
+}
